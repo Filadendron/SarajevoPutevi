@@ -138,19 +138,17 @@ form{
 	color: #b3b3b3;
 }
 
-input[type=text],input[type=email],input[type=tel] {
+input {
 	margin:1%;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
     border: 2px solid lightblue;
     border-radius: 4px;
     padding: 1%;
+    width: 300px;
 }
 
-input[type=text]:focus,input[type=email]:focus,input[type=tel]:focus{
-    background-color: lightblue;
-    width: 70%;
-}
+
 
 textarea{
 	width: 400px;
@@ -347,4 +345,42 @@ div.Providni{
 	position: absolute;
 	border-radius:50%;
 	border: 40px solid yellow;
+}
+
+p.Kontrola{
+	display: none;
+}
+
+p.ObjavljenoPrije{
+	color: #b3b3b3;
+	font-family: Lato;
+	text-decoration: underline;
+	font-size: 10px;
+	float: right;
+	padding-right: 10px;
+}
+
+ul.FilterNovostiLista{
+		list-style-type: none;
+		text-align: center;
+
+}
+
+li.FilterNov{
+	display: inline-block;
+	font-family: Lato;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	background-color: #a6a6a6;
+	border-radius: 25px;
+}
+li.FilterNov:hover{
+	background-color: #d9d9d9;
+	cursor: pointer;
 }

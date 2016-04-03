@@ -3,9 +3,10 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="stil1.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="skripta.js"></script>
 	<title>Novosti</title>
 </head>
-<body>
+<body onload="Racunaj();">
 	<div class="Gore">
 		<div class="Logo">
 			<div class="KrugVanjski">
@@ -33,6 +34,14 @@
 		</ul>
 	</div>
 	<div class="Glavno">
+		<div class="FilterNovosti">
+			<ul class="FilterNovostiLista">
+				<li class="FilterNov" onclick="OdabirNovosti(0);">Sve novosti</li>
+				<li class="FilterNov" onclick="OdabirNovosti(1);">Današnje novosti</li>
+				<li class="FilterNov" onclick="OdabirNovosti(2);">Novosti ove sedmice</li>
+				<li class="FilterNov" onclick="OdabirNovosti(3);">Novosti ovog mjeseca</li>
+			</ul>
+		</div>
 		<div class="Novost">
 			<img class="NaslovSlika" src="Slike/SARAJEVOPUTEVI-ZIMA-008.jpg" alt="Slika se nije ucitala">
 			<h2>Naslov 1</h2>
@@ -41,10 +50,13 @@
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-02-02T00:10:00</p>
 		</div>
 		<div class="Novost">
-			<img class="NaslovSlika" src="Slike/SARAJEVOPUTEVI-M.DVOR-VIJECNICA-050-960x600_c.jpg" alt="Slika se nije ucitala" >
+			<img class="NaslovSlika" src="Slike/SARAJEVOPUTEVI-M.DVOR-VIJECNICA-050-960x600_c.jpg" alt="Slika se nije ucitala">
 			<h2>Naslov 2</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -53,6 +65,8 @@
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id 
 			est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-03-23T12:02:34</p>
 		</div>
 		<div class="Novost">
 			<img class="NaslovSlika" src="Slike/2-2-960x600_c.jpg" alt="Slika se nije ucitala">
@@ -63,6 +77,8 @@
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-03-23T12:02:34</p>
 		</div>
 		<div class="Novost">
 			<img class="NaslovSlika" src="Slike/zimsko-odrzavanje-cesta-1-960x600_c.jpg" alt="Slika se nije ucitala">
@@ -73,6 +89,104 @@
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-03-23T12:02:34</p>
+		</div>
+		<div class="Novost">
+			<img class="NaslovSlika" src="Slike/DSC_4851.jpg" alt="Slika se nije ucitala">
+			<h2>Naslov 5</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-03-28T13:50:00</p>
+		</div>
+		<div class="Novost">
+			<img class="NaslovSlika" src="Slike/sarajevska_obilaznica.jpg" alt="Slika se nije ucitala">
+			<h2>Naslov 6</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-03-28T12:10:00</p>
+		</div>
+		<div class="Novost">
+			<img class="NaslovSlika" src="Slike/PP12_Rustempasina_2.jpg" alt="Slika se nije ucitala">
+			<h2>Naslov 7</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-03-28T10:10:00</p>
+		</div>
+		<div class="Novost">
+			<img class="NaslovSlika" src="Slike/u-nedjelju-bez-trolejbusa.jpg" alt="Slika se nije ucitala">
+			<h2>Naslov 8</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-03-27T10:10:00</p>
+		</div>
+		<div class="Novost">
+			<img class="NaslovSlika" src="Slike/DSC07061.jpg" alt="Slika se nije ucitala">
+			<h2>Naslov 9</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-04-03T00:10:00</p>
+		</div>
+		<div class="Novost">
+			<img class="NaslovSlika" src="Slike/0208_trcivode_3.jpg" alt="Slika se nije ucitala">
+			<h2>Naslov 10</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-04-03T21:47:00</p>
+		</div>
+		<div class="Novost">
+			<img class="NaslovSlika" src="Slike/raskrsnica-gras-1.jpg" alt="Slika se nije ucitala">
+			<h2>Naslov 11</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-04-03T21:10:00</p>
+		</div>
+		<div class="Novost">
+			<img class="NaslovSlika" src="Slike/___4_juli_2007.jpg" alt="Slika se nije ucitala">
+			<h2>Naslov 12</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p class="Kontrola">0</p>
+			<p class="ObjavljenoPrije">2016-04-03T21:50:00</p>
 		</div>
 	</div>
 	<div class="Dno">

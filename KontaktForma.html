@@ -3,6 +3,7 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="stil1.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="skripta.js"></script>
 	<title>Kontakt</title>
 </head>
 <body>
@@ -36,16 +37,16 @@
 		<h2>Možete nas kontaktirati  koristeći slijedeću formu:</h2>
 		<form>
 			  Ime i prezime:<br>
-			  <input type="text" name="ImePrezime"><br>
+			  <input id="Ime" type="text" name="ImePrezime" placeholder="Obavezno polje" oninput="Validiraj(this);"><br>
 			  E-Mail:<br>
-			  <input type="email" name="E-mail"><br>
+			  <input id="Mail" type="email" name="E-mail" placeholder="primjer@primjer.ba" oninput="Validiraj(this);"><br>
 			  Telefon:<br>
-			  <input type="tel" name="Telefon"><br>	
+			  <input id="Telefon" type="tel" name="Telefon" placeholder="Samo telefon sa pozivnim za BiH" oninput="Validiraj(this);"><br>	
 			  Naslov:<br>
-			  <input type="text" name="Naslov"><br>	  
+			  <input id="Naslov" type="text" name="Naslov" placeholder="Naslov" ><br>	  
 			  Vaša Poruka:<br>
-			  <textarea name="Poruka"></textarea><br>
-			  <button name="Dugme">Pošalji</button>
+			  <textarea id="Poruka" name="Poruka" placeholder="Tekst vase poruke" oninput="Validiraj(this);"></textarea><br>
+			  <button id="Dugme" name="Dugme" onclick="ValidirajDugme();">Pošalji</button>
 		</form> 
 	</div>
 	<div class="Dno">
