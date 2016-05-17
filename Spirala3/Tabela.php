@@ -6,6 +6,17 @@
 	<title>Kapital</title>
 </head>
 <body>
+	<?php
+		session_start();
+		if (isset($_SESSION['username'])) {
+	        print'<div class="admindiv">';
+			print'<ul class="adminlista">';
+			print'<li class="adminmeni"><a href="UnosNovosti.php">Dodaj novost</a></li>';
+			print'<li class="adminmeni"><a href="Logout.php">Logout</a></li>';
+			print'</ul>';
+			print'</div>';
+		}
+    ?>
 	<div class="Gore">
 		<div class="Logo">
 			<div class="KrugVanjski">
@@ -24,13 +35,14 @@
 			<h1>"SARAJEVOPUTEVI"d.d.</h1>
 		</div>
 	</div>
+
 	<div class="meni">
 		<ul class="lista">
-			<li class="nav"><a href="prva.html">NOVOSTI</a></li>
-			<li class="nav"><a href="Tabela.html">KAPITAL</a></li>
-			<li class="nav"><a href="KontaktForma.html">KONTAKT</a></li>
-			<li class="nav"><a href="Linkovi.html">LINKOVI</a></li>
-			<li class="nav"><a href="Login.html">LOGIN</a></li>
+			<li class="nav"><a href="prva.php">NOVOSTI</a></li>
+			<li class="nav"><a href="Tabela.php">KAPITAL</a></li>
+			<li class="nav"><a href="KontaktForma.php">KONTAKT</a></li>
+			<li class="nav"><a href="Linkovi.php">LINKOVI</a></li>
+			<li class="nav"><a href="Login.php">LOGIN</a></li>
 		</ul>
 	</div>
 	<div class="Glavno">
